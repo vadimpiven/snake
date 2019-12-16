@@ -1,0 +1,73 @@
+﻿<Application x:Class="Snake.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Snake"
+             StartupUri="Views/MainView.xaml">
+    <Application.Resources>
+        <!--IMAGES-->
+        <!--converted from SVG using https://github.com/BerndK/SvgToXaml/releases/tag/Ver_1.3.0-->
+
+        <ImageBrush x:Key="foodBrush">
+            <ImageBrush.ImageSource>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup ClipGeometry="M0,0 V56.673 H56.673 V0 H0 Z">
+                            <DrawingGroup Opacity="1">
+                                <GeometryDrawing Brush="#FFD13834" Geometry="F1 M56.673,56.673z M0,0z M31.483,16.213C29.418,16.724 27.256,16.724 25.191,16.213 14.435,13.553 5.429,14.573 5.533,34.856 5.586,45.246 15.316,58.718 25.542,56.413 27.376,56 29.297,56 31.131,56.413 41.357,58.718 51.087,45.246 51.14,34.856 51.244,14.574 42.239,13.553 31.483,16.213z" />
+                                <GeometryDrawing Brush="#FFF75B57" Geometry="F1 M56.673,56.673z M0,0z M10.533,29.674C9.98,29.674 9.533,29.226 9.533,28.674 9.533,23.16 13.57,18.674 18.533,18.674 19.086,18.674 19.533,19.122 19.533,19.674 19.533,20.226 19.086,20.674 18.533,20.674 14.674,20.674 11.533,24.263 11.533,28.674 11.533,29.226 11.085,29.674 10.533,29.674z" />
+                                <GeometryDrawing Brush="#FF4C312C" Geometry="F1 M56.673,56.673z M0,0z M28.265,19.999C27.728,19.999 27.284,19.572 27.267,19.031 27.132,14.799 25.506,9.486 21.345,7.267 20.858,7.007 20.673,6.402 20.933,5.914 21.194,5.427 21.797,5.242 22.287,5.502 27.201,8.122 29.114,14.175 29.266,18.967 29.284,19.519 28.851,19.981 28.298,19.998 28.286,19.999 28.276,19.999 28.265,19.999z" />
+                                <GeometryDrawing Brush="#FF994530" Geometry="F1 M56.673,56.673z M0,0z M28.176,23.592C26.496,23.592 24.915,22.937 23.726,21.747 23.335,21.357 23.335,20.724 23.726,20.333 24.117,19.942 24.749,19.942 25.14,20.333 25.952,21.145 27.031,21.592 28.176,21.592 29.321,21.592 30.4,21.145 31.211,20.333 31.602,19.942 32.234,19.942 32.625,20.333 33.016,20.723 33.016,21.356 32.625,21.747 31.436,22.937 29.856,23.592 28.176,23.592z" />
+                                <GeometryDrawing Brush="#FF659C35" Geometry="F1 M56.673,56.673z M0,0z M27.305,13.04L27.914,8.954C28.557,4.639,31.945,1.251,36.26,0.607999999999999L40.345,0 39.736,4.086C39.093,8.401,35.705,11.789,31.39,12.432L27.305,13.04z" />
+                            </DrawingGroup>
+                            <DrawingGroup.Transform>
+                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                            </DrawingGroup.Transform>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+
+        <ImageBrush x:Key="headBrush">
+            <ImageBrush.ImageSource>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup ClipGeometry="M0,0 V20.902 H20.902 V0 H0 Z">
+                            <DrawingGroup Opacity="1">
+                                <DrawingGroup Opacity="1">
+                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M20.902,20.902z M0,0z M20.901,10.45C20.901,16.221 16.221,20.902 10.454,20.902 4.681,20.902 0.00100000000000122,16.222 0.00100000000000122,10.45 0.001,4.682 4.681,0 10.454,0 16.222,0 20.901,4.682 20.901,10.45z" />
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup.Transform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </DrawingGroup.Transform>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+
+        <ImageBrush x:Key="tailBrush">
+            <ImageBrush.ImageSource>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup ClipGeometry="M0,0 V438.533 H438.533 V0 H0 Z">
+                            <DrawingGroup Opacity="1">
+                                <GeometryDrawing Brush="#FF000000" Geometry="F1 M438.533,438.533z M0,0z M409.133,109.203C389.525,75.611 362.928,49.014 329.335,29.407 295.736,9.801 259.058,0 219.273,0 179.492,0 142.803,9.801 109.21,29.407 75.615,49.011 49.018,75.608 29.41,109.203 9.801,142.8 0,179.489 0,219.267 0,259.047 9.804,295.73 29.407,329.329 49.014,362.921 75.611,389.518 109.206,409.127 142.803,428.732 179.489,438.534 219.269,438.534 259.049,438.534 295.739,428.732 329.334,409.127 362.927,389.525 389.523,362.921 409.129,329.329 428.732,295.733 438.532,259.045 438.532,219.267 438.533,179.485 428.732,142.795 409.133,109.203z M353.742,297.208C339.848,320.999 321.006,339.841 297.215,353.742 273.424,367.636 247.444,374.576 219.27,374.576 191.103,374.576 165.121,367.636 141.327,353.742 117.536,339.841 98.694,320.999 84.8000000000001,297.208 70.903,273.417 63.9570000000001,247.436 63.9570000000001,219.267 63.9570000000001,191.096 70.906,165.115 84.8000000000001,141.324 98.6910000000001,117.533 117.538,98.687 141.327,84.794 165.118,70.899 191.099,63.954 219.27,63.954 247.443,63.954 273.424,70.899 297.215,84.794 321.006,98.688 339.849,117.533 353.742,141.324 367.637,165.115 374.58,191.096 374.58,219.267 374.58,247.436 367.637,273.417 353.742,297.208z" />
+                            </DrawingGroup>
+                            <DrawingGroup.Transform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </DrawingGroup.Transform>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+
+        <ImageBrush x:Key="noneBrush">
+            <!--draw nothing-->
+        </ImageBrush>
+        
+        <!--END OF IMAGES-->
+    </Application.Resources>
+</Application>

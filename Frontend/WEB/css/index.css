@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    background-color: #060;
+    background-image: url("../img/bg.png");
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+footer {
+    color: rgba(255, 255, 255, .7);
+}
+
+#app-box {
+    position: relative;
+    width: 50vh;
+    min-width: 45vw;
+}
+
+#app-box:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.none {
+    background-image: none;
+}
+
+.head {
+    background-image: url("../img/head.svg");
+    background-size: 80%;
+}
+
+.tail {
+    background-image: url("../img/tail.svg");
+    background-size: 80%;
+}
+
+.food {
+    background-image: url("../img/food.svg");
+    background-size: 97%;
+}

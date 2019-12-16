@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{810E3FF3-C5CA-45F2-85D8-E5F0B47899A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeTests", "SnakeTests\SnakeTests.csproj", "{B43D5064-6907-442A-9116-408A0FC0CAB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{810E3FF3-C5CA-45F2-85D8-E5F0B47899A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810E3FF3-C5CA-45F2-85D8-E5F0B47899A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810E3FF3-C5CA-45F2-85D8-E5F0B47899A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810E3FF3-C5CA-45F2-85D8-E5F0B47899A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43D5064-6907-442A-9116-408A0FC0CAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43D5064-6907-442A-9116-408A0FC0CAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43D5064-6907-442A-9116-408A0FC0CAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43D5064-6907-442A-9116-408A0FC0CAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
+		version = 1.0
+	EndGlobalSection
+EndGlobal

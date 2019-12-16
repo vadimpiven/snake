@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Vadim Piven">
+
+        <title>Snake Game</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body class="text-center">
+        <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <h3 class="masthead-brand">Snake Game</h3>
+            </header>
+
+            <div class="jumbotron mx-auto p-0" id="app-box">
+                <main class="container p-3 w-100 h-100 position-absolute" id="app">
+                    <table>
+                        <tr v-for="col in table">
+                            <td v-for="row in col" :class="row"></td>
+                        </tr>
+                    </table>
+                </main>
+                <script src="js/index.js"></script>
+            </div>
+
+            <footer class="mt-auto">
+                <p>Piven Vadim &copy; SafeBoard 2019</p>
+            </footer>
+        </div>
+    </body>
+</html>
